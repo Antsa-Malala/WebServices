@@ -1,13 +1,13 @@
-package TPWS.Firstws;
+package WebServices.TP1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FirstwsApplication {
+public class Tp1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirstwsApplication.class, args);
+		SpringApplication.run(Tp1Application.class, args);
 	}
 
 }
