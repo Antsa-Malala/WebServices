@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "f203b631-4ca7-4b8a-b1cc-5f952bff4a04",
+		"name": "transport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30656645"
+	},
+	"item": [
+		{
+			"name": "getAllVehicles",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apiVehicle/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apiVehicle",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTrips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apiTrip/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apiTrip",
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTripById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apiTrip/trip/K1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apiTrip",
+						"trip",
+						"K1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addVehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\" : \"V3\",\n    \"brand\" : \"Grand Starex\",\n    \"year\" : \"2010\",\n    \"number_place\": \"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apiVehicle/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apiVehicle",
+						"vehicle"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "Sprinter Mercedes Benz",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateVehicle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\" : \"Sprinter Mercedes Benz\",\n    \"year\" : \"2008\",\n    \"number_place\": \"16\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apiVehicle/vehicle/V1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apiVehicle",
+						"vehicle",
+						"V1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vehicle_id\" : \"V2\",\n    \"date_trip\": \"2023-03-03T16:54:40.000Z\",\n    \"debut_km\": \"100\",\n    \"end_km\": \"125\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apiTrip/trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apiTrip",
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTrip",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apiTrip/trip/6533d7e272ff3a43b35b3c2a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apiTrip",
+						"trip",
+						"6533d7e272ff3a43b35b3c2a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

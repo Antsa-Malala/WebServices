@@ -1,0 +1,18 @@
+[{
+  "_id": "K1",
+  "vehicle_id": "V1",
+  "date_trip": {
+    "$date": "2023-10-20T06:48:06.844Z"
+  },
+  "debut_km": 150,
+  "end_km": 175
+},
+{
+  "_id": "K2",
+  "vehicle_id": "V1",
+  "date_trip": {
+    "$date": "2023-10-21T06:48:06.844Z"
+  },
+  "debut_km": 175,
+  "end_km": 189
+}]
