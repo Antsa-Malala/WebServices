@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "65340c96260b92dc47f062ec"
+  },
+  "user_id": 2,
+  "token": "cbdjudlbcv5246745386VUK",
+  "date_expiration": {
+    "$date": "2023-10-22T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65340ced260b92dc47f062ed"
+  },
+  "user_id": 1,
+  "token": "cbdjudlbcv5246745386VUK",
+  "date_expiration": {
+    "$date": "2023-10-22T00:00:00.000Z"
+  }
+}]

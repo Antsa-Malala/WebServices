@@ -1,0 +1,10 @@
+[{
+  "_id": "1",
+  "username": "jean@g.com",
+  "password": "pass1"
+},
+{
+  "_id": "2",
+  "username": "jean2@g.com",
+  "password": "pass2"
+}]

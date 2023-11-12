@@ -1,0 +1,22 @@
+[{
+  "_id": "V1",
+  "brand": "Sprinter Mercedes Benz",
+  "year": 2008,
+  "number_place": 16,
+  "_class": "WebServices.TP1.model.Vehicle"
+},
+{
+  "_id": "V2",
+  "brand": "Crafter",
+  "year": 2008,
+  "number_places": 16
+},
+{
+  "_id": {
+    "$oid": "6533d101f871324c9a6da2ca"
+  },
+  "brand": "Grand Starex",
+  "year": 2010,
+  "number_place": 12,
+  "_class": "WebServices.TP1.model.Vehicle"
+}]
