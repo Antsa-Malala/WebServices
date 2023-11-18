@@ -1,14 +1,14 @@
 package WebServices.TP1.model;
+import org.bson.BsonTimestamp;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
-
-import java.security.MessageDigest;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-
+@Document(collection = "token")
 public class Token {
+    private User user;
     private String token;
-    private Date date_expiration;
+    private BsonTimestamp date_expiration;
+    private BsonTimestamp date_creation;
+    private boolean etat;
 
     public String getToken()
     {
@@ -18,59 +18,63 @@ public class Token {
     {
         this.token=token;
     } 
+    public User getUser()
+    {
+        return this.user;
+    }
+    public void setUser(User use)
+    {
+        this.user=use;
+    }
+    public boolean getEtat()
+    {
+        return this.etat;
+    }
+    public void setEtat(boolean etat)
+    {
+        this.etat=etat;
+    }
+    public void setEtat(String etat)
+    {
+        boolean eta=Boolean.valueOf(etat);
+        this.setEtat(eta);
+    }
 
-    public Date getDate_expiration()
+    public BsonTimestamp getDate_expiration()
     {
         return this.date_expiration;
     }
-    public void setDate_expiration(Date date_expiration)
+    public BsonTimestamp getDate_creation()
+    {
+        return this.date_creation;
+    }
+    public void setDate_expiration(BsonTimestamp date_expiration)
     {
         this.date_expiration=date_expiration;
     }
-    
-     public void setDate_expiration(String date_expiration) {
-        java.sql.Date daty=java.sql.Date.valueOf(date_expiration);
-        this.setDate_expiration(daty);
-    }
 
-    public Token(String token,Date date_expiration2)
+    public void setDate_creation(BsonTimestamp date_creation)
     {
-        this.setToken(token);
-        this.setDate_expiration(date_expiration2);
+        this.date_creation=date_creation;
     }
-    public Token(String token,String date_expiration)
+    
+
+
+    public Token(User user,String token,BsonTimestamp date_expiration,BsonTimestamp date_creation,boolean etat)
+    {
+        this.setUser(user);
+        this.setToken(token);
+        this.setDate_expiration(date_expiration);
+        this.setDate_creation(date_creation);
+        this.setEtat(etat);
+    }
+    public Token(String token,BsonTimestamp date_expiration,BsonTimestamp date_creation,boolean etat)
     {
         this.setToken(token);
         this.setDate_expiration(date_expiration);
+        this.setDate_creation(date_creation);
+        this.setEtat(etat);
     }
-
-    public Token generateToken(String nom_utilisateur,String pass) throws Exception
-    {
-        Date daty = new Date();
-
-        SimpleDateFormat format = new SimpleDateFormat("dyDHsdYDm");
-        String formate = format.format(daty);
-        String base=formate+nom_utilisateur+pass;
-        try {
-            MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
-
-            byte[] hashBytes = sha256.digest(base.getBytes());
-
-            StringBuilder tok = new StringBuilder();
-            for (byte b : hashBytes) {
-                tok.append(String.format("%02x", b));
-            }
-
-            String token = tok.toString();
-            Timestamp expirationTime = new Timestamp(System.currentTimeMillis() + 3600000);
-            Date date_expiration = new Date(expirationTime.getTime());
-
-            return new Token(token,date_expiration);
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-
     public Token(){
 
     }
