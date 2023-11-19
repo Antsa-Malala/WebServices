@@ -1,5 +1,6 @@
 package WebServices.TP1.controller;
 
+import WebServices.TP1.model.Reponse;
 import WebServices.TP1.model.User;
 import WebServices.TP1.service.UserService;
 import WebServices.TP1.service.TokenService;
@@ -24,12 +25,21 @@ public class UserController {
     TokenService tokenService;
 
     @GetMapping("/getName/{username}")
-    public User getByUsername(@PathVariable String username,HttpServletRequest request) throws Exception {
-        if(tokenService.verifieConnection(request))
-        {
-            List<User> user=userService.findByUserName(username);
-            return user.get(0);
+    public Reponse<User> getByUsername(@PathVariable String username,HttpServletRequest request){
+        Reponse<User> valiny=new Reponse<User>();
+        try{
+            if(tokenService.verifieConnection(request))
+            {
+                List<User> user=userService.findByUserName(username);
+                valiny.setData(user.get(0));
+            }else{
+                throw new Exception("Vous ne pouvez pas acceder a cette ressource car vous n'etes pas connecte");
+            }
         }
-        return null;
+        catch(Exception e)
+        {
+            valiny.setErreur(e.getMessage());
+        }
+        return valiny;
     }
 }   
