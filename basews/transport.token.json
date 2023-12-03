@@ -1,20 +1,150 @@
 [{
   "_id": {
-    "$oid": "65340c96260b92dc47f062ec"
+    "$oid": "655a089f5717f7011f7a58eb"
   },
-  "user_id": 2,
-  "token": "cbdjudlbcv5246745386VUK",
+  "user": {
+    "_id": "2",
+    "username": "jean2@g.com",
+    "password": "pass2"
+  },
+  "token": "3477b8328b1fafe1c8b8ff3454dacc77f360dc019ea91fb68ed23db564c07fc8",
   "date_expiration": {
-    "$date": "2023-10-22T00:00:00.000Z"
-  }
+    "$timestamp": {
+      "t": 1700402863,
+      "i": 0
+    }
+  },
+  "date_creation": {
+    "$timestamp": {
+      "t": 1700399263,
+      "i": 0
+    }
+  },
+  "etat": false,
+  "_class": "WebServices.TP1.model.Token"
 },
 {
   "_id": {
-    "$oid": "65340ced260b92dc47f062ed"
+    "$oid": "655a0a842109413aab6b1cf0"
   },
-  "user_id": 1,
-  "token": "cbdjudlbcv5246745386VUK",
+  "user": {
+    "_id": "2",
+    "username": "jean2@g.com",
+    "password": "pass2"
+  },
+  "token": "4b4a642ce783fb08faa64cc4bca6577438150d061390f02ca1f20a5c1ca8f378",
   "date_expiration": {
-    "$date": "2023-10-22T00:00:00.000Z"
-  }
+    "$timestamp": {
+      "t": 1700403348,
+      "i": 0
+    }
+  },
+  "date_creation": {
+    "$timestamp": {
+      "t": 1700399748,
+      "i": 0
+    }
+  },
+  "etat": false,
+  "_class": "WebServices.TP1.model.Token"
+},
+{
+  "_id": {
+    "$oid": "655a11e92ad6c83d5131858a"
+  },
+  "user": {
+    "_id": "2",
+    "username": "jean2@g.com",
+    "password": "pass2"
+  },
+  "token": "cd241a9d85e77aa1bbb5bf6ac0bfddccf2c8d213d1a07984713d83ab09bdfd0f",
+  "date_expiration": {
+    "$timestamp": {
+      "t": 1700405241,
+      "i": 0
+    }
+  },
+  "date_creation": {
+    "$timestamp": {
+      "t": 1700401641,
+      "i": 0
+    }
+  },
+  "etat": true,
+  "_class": "WebServices.TP1.model.Token"
+},
+{
+  "_id": {
+    "$oid": "655a1252acd625193979c0f0"
+  },
+  "user": {
+    "_id": "2",
+    "username": "jean2@g.com",
+    "password": "pass2"
+  },
+  "token": "76943b25e9e799258f8429451c859fd5e16d6dd61b2d8c170825685eb3945dfd",
+  "date_expiration": {
+    "$timestamp": {
+      "t": 1700405346,
+      "i": 0
+    }
+  },
+  "date_creation": {
+    "$timestamp": {
+      "t": 1700401746,
+      "i": 0
+    }
+  },
+  "etat": false,
+  "_class": "WebServices.TP1.model.Token"
+},
+{
+  "_id": {
+    "$oid": "655a127cacd625193979c0f1"
+  },
+  "user": {
+    "_id": "2",
+    "username": "jean2@g.com",
+    "password": "pass2"
+  },
+  "token": "79c21f1679446528732172f2b1ba44f893bf695eda3be26b655fb2c5698d9ac7",
+  "date_expiration": {
+    "$timestamp": {
+      "t": 1700405388,
+      "i": 0
+    }
+  },
+  "date_creation": {
+    "$timestamp": {
+      "t": 1700401788,
+      "i": 0
+    }
+  },
+  "etat": true,
+  "_class": "WebServices.TP1.model.Token"
+},
+{
+  "_id": {
+    "$oid": "655a1c183f85be47b246e3ed"
+  },
+  "user": {
+    "_id": "2",
+    "username": "jean2@g.com",
+    "password": "pass2"
+  },
+  "token": "6bbf5507fdabb291f475b448f1bd832e42e83b481177a54be4734e19b5b220f5",
+  "date_expiration": {
+    "$timestamp": {
+      "t": 1700407848,
+      "i": 0
+    }
+  },
+  "date_creation": {
+    "$timestamp": {
+      "t": 1700404248,
+      "i": 0
+    }
+  },
+  "etat": true,
+  "_class": "WebServices.TP1.model.Token"
 }]
